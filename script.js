@@ -60,11 +60,10 @@ function renderMuseums(museums) {
     const attributes = [museum.report, museum.website, museum.facebook, museum.instagram];
     const labels = ['Relatório', 'Site', 'Facebook', 'Instagram'];
     attributes.forEach(function (btn, i) {
-      const button = document.createElement('button');
+      const button = document.createElement('a');
       button.className = 'button';
-      button.type = 'button';
       button.textContent = labels[i];
-      button.setAttribute("src", btn);
+      button.setAttribute("href", btn);
 
       const span = document.createElement('span');
       span.className = 'cover';
